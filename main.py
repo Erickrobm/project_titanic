@@ -1,5 +1,5 @@
-from src.data.utils import config as cf
 import pandas as pd
+from src.data.utils import config as cf
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, roc_auc_score
 from src.data.utils import config as cf
