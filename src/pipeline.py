@@ -6,7 +6,6 @@ from src.feature_engineering.transformers import transformers_categorical as tc
 from src.feature_engineering.transformers import transformers_numerical as tm
 from data.utils import config as cf
 
-
 titanic_pipeline = Pipeline(
     [
         ("cabin_only_letter", tc.Cabin_Letter_Extractor()),
