@@ -1,8 +1,7 @@
 import pandas as pd
-from src.data.utils import config as cf
+from data.utils import config as cf
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, roc_auc_score
-from src.data.utils import config as cf
 from src.pipeline import titanic_pipeline
 
 df = pd.read_csv(cf.URL, na_values="?")
