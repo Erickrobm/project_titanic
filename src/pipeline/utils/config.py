@@ -5,5 +5,3 @@ CATEGORICAL_VARS = ["sex", "cabin", "embarked", "title"]
 TARGET = "survived"
 SEED_SPLIT = 404
 SEED_MODEL = 404
-TRAIN_DATA_FILE = "data/processed/train.csv"
-TEST_DATA_FILE = "data/processed/test.csv"
