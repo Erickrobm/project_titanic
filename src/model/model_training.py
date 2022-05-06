@@ -9,6 +9,7 @@ y_train = pd.read_csv(cf.TRAIN_TARGET_FILE).to_numpy().flatten()
 logreg_model = LogisticRegression(
     C=0.0005, class_weight="balanced", random_state=cf.SEED_MODEL
 )
+
 logreg_model.fit(X_train, y_train)
 
 joblib.dump(logreg_model, cf.MODEL_FILE)
