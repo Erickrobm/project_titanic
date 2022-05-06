@@ -1,0 +1,10 @@
+numpy
+pandas
+build
+scikit-learn
+pyment
+cookiecutter
+pycodestyle
+black
+typing
+regex
