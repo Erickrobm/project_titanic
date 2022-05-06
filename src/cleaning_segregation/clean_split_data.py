@@ -1,13 +1,12 @@
 import pandas as pd
-from feature_engineering.transformers import transformers_categorical as tc
 from sklearn.model_selection import train_test_split
 from utils import config
 
 # Loading data from specific url
 df = pd.read_csv(config.URL, na_values="?")
 
-df["cabin"] = df["cabin"].apply(tc.Cabin_Letter_Extractor(df))
-df["title"] = df["title"].apply(tc.GetTitle(df))
+df["cabin"] = df.cabin.apply(lambda x: x[0] if type(x) == str else x)
+df["title"] = df.name.apply(lambda x: x.split(",")[1].split(".")[0])
 df.drop(columns=config.DROP_COLS, axis=1, inplace=True)
 
 # Write data
